@@ -1,0 +1,64 @@
+void setup() {
+  // put your setup code here, to run once:
+ Serial.begin(9600);
+  pinMode (LED_BUILTIN, OUTPUT); 
+  pinMode(6, INPUT);
+  pinMode(7, INPUT);
+  pinMode(8, INPUT);
+  pinMode(5, INPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+if (digitalRead(6) == HIGH) 
+ {
+    Serial.println("Active");
+    digitalWrite(LED_BUILTIN, HIGH);
+    delay(1000);
+    
+  }
+  else {
+    Serial.println("Inactive");
+    digitalWrite(LED_BUILTIN, LOW);
+  }
+  delay(1000);
+
+  if (digitalRead(7) == HIGH) 
+ {
+    Serial.println("Active");
+    digitalWrite(LED_BUILTIN, HIGH);
+    delay(1000);
+    
+  }
+  else {
+    Serial.println("Inactive");
+    digitalWrite(LED_BUILTIN, LOW);
+    
+  }
+  delay(1000); 
+  if (digitalRead(8) == HIGH) 
+ {
+    Serial.println("Active");
+    digitalWrite(LED_BUILTIN, HIGH);
+    delay(1000);
+    
+  }
+  else {
+    Serial.println("Inactive");
+    digitalWrite(LED_BUILTIN, LOW);
+  }
+  delay(1000);
+  
+    if (digitalRead(5) == HIGH) 
+ {
+    Serial.println("Active");
+    digitalWrite(LED_BUILTIN, HIGH);
+    delay(1000);
+    
+  }
+  else {
+    Serial.println("Inactive");
+    digitalWrite(LED_BUILTIN, LOW);
+  }
+  delay(1000);
+}
